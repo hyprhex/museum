@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"net/http"
 	"text/template"
+
+	"github.com/hyprhex/museum/data"
 )
 
 func handleHello(w http.ResponseWriter, r *http.Request) {
@@ -18,7 +20,7 @@ func handleTemplate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	
-	html.Execute(w, "Test")
+	html.Execute(w, data.GetAll()[1])
 }
 
 func main() {
