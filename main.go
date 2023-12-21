@@ -20,7 +20,7 @@ func handleTemplate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	
-	html.Execute(w, data.GetAll()[1])
+	html.Execute(w, data.GetAll())
 }
 
 func main() {
